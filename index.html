@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark" data-lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cất Link — Biến link thành việc cần làm (Local-first iOS App)</title>
+  <meta name="description" content="Cất Link (CastLink) - Ứng dụng quản lý link thông minh cho iOS 17+. Phân loại theo 6 ý định (Xem, Đọc, Mua, Đi, Làm, Gửi) và 3 thời điểm nhắc nhở. Hoạt động 100% on-device, SwiftData local-first.">
+  <meta name="keywords" content="Cất Link, CastLink, save for later, bookmark manager, iOS 17, SwiftData, read later, productivity, local-first, action inbox">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cất Link — Biến link thành việc cần làm">
+  <meta property="og:description" content="Lưu link 1 chạm từ TikTok, YouTube, Safari, Shopee. Phân loại theo ý định và nhắc nhở đúng thời điểm. Bảo mật 100% trên thiết bị.">
+  <meta property="og:image" content="assets/AppIcon-1024.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cất Link — Biến link thành việc cần làm">
+  <meta name="twitter:description" content="Ứng dụng lưu trữ link thông minh cho iOS 17+. Hoạt động 100% local-first.">
+  <meta name="twitter:image" content="assets/AppIcon-1024.png">
+
+  <link rel="icon" type="image/png" href="assets/AppIcon-1024.png">
+  <link rel="apple-touch-icon" href="assets/AppIcon-1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/AppIcon-1024.png" alt="Cất Link App Icon" class="brand-icon">
+        <span>Cất Link</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link" data-i18n-vi="Tính năng" data-i18n-en="Features">Tính năng</a></li>
+          <li><a href="#intents" class="nav-link" data-i18n-vi="Ý định & Thời điểm" data-i18n-en="Intents & Timing">Ý định & Thời điểm</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-i18n-vi="Cách dùng" data-i18n-en="How it Works">Cách dùng</a></li>
+          <li><a href="#privacy" class="nav-link" data-i18n-vi="Bảo mật" data-i18n-en="Privacy">Bảo mật</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n-vi="Hỏi đáp" data-i18n-en="FAQ">Hỏi đáp</a></li>
+          <li><a href="privacy.html" class="nav-link" data-i18n-vi="Chính sách" data-i18n-en="Policy">Chính sách</a></li>
+          <li><a href="support.html" class="nav-link" data-i18n-vi="Hỗ trợ" data-i18n-en="Support">Hỗ trợ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-btn" aria-label="Toggle language">
+          🌐 <span class="lang-label">EN</span>
+        </button>
+        <button class="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <a href="#download" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-i18n-vi="Tải ứng dụng" data-i18n-en="Get App">Tải ứng dụng</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="download">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span data-i18n-vi="Native iOS 17 & iPadOS • SwiftData" data-i18n-en="Native iOS 17 & iPadOS • SwiftData">Native iOS 17 & iPadOS • SwiftData</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span data-i18n-vi="Biến link thành" data-i18n-en="Turn bookmarks into">Biến link thành</span><br>
+          <span class="text-gradient" data-i18n-vi="việc cần làm đúng lúc." data-i18n-en="actionable tasks on time.">việc cần làm đúng lúc.</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n-vi="Lưu nhanh trong 2 giây từ nút Chia sẻ của iOS. Phân loại theo 6 Ý định (Xem, Đọc, Mua, Đi, Làm, Gửi) và 3 Thời điểm nhắc nhở. Hoạt động 100% trên thiết bị, không cần tài khoản." data-i18n-en="Save in 2 seconds via native iOS Share Sheet. Categorize by 6 Intents (Watch, Read, Buy, Go, Do Task, Send) and 3 Timing Buckets. 100% on-device with zero account friction.">
+          Lưu nhanh trong 2 giây từ nút Chia sẻ của iOS. Phân loại theo 6 Ý định (Xem, Đọc, Mua, Đi, Làm, Gửi) và 3 Thời điểm nhắc nhở. Hoạt động 100% trên thiết bị, không cần tài khoản.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://apps.apple.com" class="btn-appstore" target="_blank" rel="noopener">
+            <svg viewBox="0 0 170 170">
+              <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.7-7.79-11.99-14.25-6.3-9.57-11.26-20.73-14.88-33.48-3.61-12.76-5.43-24.87-5.43-36.35 0-14.37 3.59-26.39 10.76-36.07 7.18-9.68 16.37-14.64 27.57-14.88 4.88 0 10.11 1.25 15.69 3.75 5.58 2.5 9.4 3.81 11.47 3.93 1.85-.12 5.89-1.5 12.13-4.13 6.24-2.63 11.66-3.82 16.27-3.57 12.28.62 22.31 5.3 30.08 14.04-10.74 6.52-16 15.42-15.78 26.71.22 8.78 3.52 16.2 9.89 22.26 6.37 6.06 13.98 9.61 22.84 10.65-2.29 6.74-4.88 13.43-7.78 20.07zM119.22 33.15c0-7.39 2.65-14.18 7.96-20.37 5.31-6.19 11.75-9.92 19.32-11.19.22 1.49.33 2.87.33 4.14 0 7.39-2.78 14.33-8.34 20.82-5.56 6.49-12.16 10.23-19.8 11.21-.21-1.38-.32-2.7-.32-3.95z" />
+            </svg>
+            <div class="btn-appstore-text">
+              <span>Download on the</span>
+              <strong>App Store</strong>
+            </div>
+          </a>
+
+          <a href="#intents" class="btn btn-secondary" data-i18n-vi="Khám phá 6 Ý định ↓" data-i18n-en="Explore 6 Intents ↓">
+            Khám phá 6 Ý định ↓
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🔒</span>
+            <span data-i18n-vi="Local-first (SwiftData)" data-i18n-en="Local-first (SwiftData)">Local-first (SwiftData)</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">⚡️</span>
+            <span data-i18n-vi="Dán nhanh 1 chạm" data-i18n-en="1-Tap Quick Paste">Dán nhanh 1 chạm</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">🎯</span>
+            <span data-i18n-vi="Nhắc nhở nhẹ nhàng" data-i18n-en="Gentle Reminders">Nhắc nhở nhẹ nhàng</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Mockup UI matching actual App -->
+      <div class="hero-mockup-wrapper">
+        <div class="mockup-glow"></div>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <!-- Dynamic Island -->
+            <div class="phone-notch">
+              <div class="phone-island"></div>
+            </div>
+
+            <!-- Top Header matching TodayView -->
+            <div class="phone-top-bar">
+              <div>
+                <div class="phone-greeting" data-i18n-vi="Hôm nay • 21 thg 8" data-i18n-en="Today • Aug 21">Hôm nay • 21 thg 8</div>
+                <div class="phone-app-title" data-i18n-vi="Hôm nay" data-i18n-en="Today">Hôm nay</div>
+              </div>
+              <div class="phone-actions">
+                <div class="phone-btn-paste">
+                  <span>⚡️</span>
+                  <span data-i18n-vi="Dán nhanh" data-i18n-en="Quick Paste">Dán nhanh</span>
+                </div>
+                <div class="phone-btn-gear">⚙️</div>
+              </div>
+            </div>
+
+            <!-- Clipboard Quick Save Banner Preview -->
+            <div class="phone-clipboard-banner">
+              <div class="phone-clipboard-text">🔗 https://youtube.com/watch?v=...</div>
+              <div class="phone-clipboard-btn" data-i18n-vi="Cất ngay" data-i18n-en="Save">Cất ngay</div>
+            </div>
+
+            <!-- VIEW 1: TODAY LIST (Default) -->
+            <div class="phone-card-list" id="mockup-view-today">
+              <!-- Card 1: Watch -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip watch">🎬 Xem</span>
+                  <span class="due-time">🌙 Tối nay 20:00</span>
+                </div>
+                <div class="phone-card-title">Hướng dẫn thiết kế SwiftUI 6 & App Intent mới</div>
+                <div class="phone-card-domain">▶ youtube.com • 15 phút trước</div>
+              </div>
+
+              <!-- Card 2: Buy -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip buy">🛍 Mua</span>
+                  <span class="due-time">🗓 Cuối tuần</span>
+                </div>
+                <div class="phone-card-title">Bàn phím cơ không dây Low Profile RGB</div>
+                <div class="phone-card-domain">🛍 shopee.vn • 1 giờ trước</div>
+              </div>
+
+              <!-- Card 3: Read -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip read">📖 Đọc</span>
+                  <span class="due-time">📥 Để sau</span>
+                </div>
+                <div class="phone-card-title">Local-first software: You own your data</div>
+                <div class="phone-card-domain">🌐 inkandswitch.com • Hôm qua</div>
+              </div>
+            </div>
+
+            <!-- VIEW 2: LIBRARY (Toggled via bottom tabs) -->
+            <div class="phone-card-list" id="mockup-view-library" style="display: none;">
+              <!-- Intent Chips Bar in Library -->
+              <div style="display: flex; gap: 4px; overflow-x: auto; padding-bottom: 4px;">
+                <span style="font-size: 0.65rem; background: var(--primary); color: white; padding: 2px 8px; border-radius: 12px; font-weight: 700;">Tất cả</span>
+                <span style="font-size: 0.65rem; background: rgba(255,255,255,0.08); color: #94A3B8; padding: 2px 8px; border-radius: 12px;">🎬 Xem</span>
+                <span style="font-size: 0.65rem; background: rgba(255,255,255,0.08); color: #94A3B8; padding: 2px 8px; border-radius: 12px;">📖 Đọc</span>
+                <span style="font-size: 0.65rem; background: rgba(255,255,255,0.08); color: #94A3B8; padding: 2px 8px; border-radius: 12px;">🛍 Mua</span>
+              </div>
+
+              <!-- Card: DoTask -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip dotask">⚡️ Làm</span>
+                  <span class="due-time">🌙 Tối nay</span>
+                </div>
+                <div class="phone-card-title">Đăng ký tham gia giải chạy marathon 2026</div>
+                <div class="phone-card-domain">🌐 vnexpress.net</div>
+              </div>
+
+              <!-- Card: Go -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip go">📍 Đi</span>
+                  <span class="due-time">🗓 Cuối tuần</span>
+                </div>
+                <div class="phone-card-title">Quán cà phê view hồ yên tĩnh làm việc cuối tuần</div>
+                <div class="phone-card-domain">📍 maps.google.com</div>
+              </div>
+
+              <!-- Card: Send -->
+              <div class="phone-card">
+                <div class="phone-card-top">
+                  <span class="intent-chip send">✉️ Gửi</span>
+                  <span class="due-time">📥 Để sau</span>
+                </div>
+                <div class="phone-card-title">Tài liệu kiến trúc hệ thống phân tán</div>
+                <div class="phone-card-domain">🐙 github.com</div>
+              </div>
+            </div>
+
+            <!-- Tab Bar matching actual RootTabView -->
+            <div class="phone-bottom-nav">
+              <div class="bottom-nav-item active" id="mockup-tab-today">
+                <span style="font-size: 1.1rem;">✨</span>
+                <span data-i18n-vi="Hôm nay" data-i18n-en="Today">Hôm nay</span>
+              </div>
+              <div class="bottom-nav-item" id="mockup-tab-library">
+                <span style="font-size: 1.1rem;">📥</span>
+                <span data-i18n-vi="Tủ link" data-i18n-en="Library">Tủ link</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 Intents Section -->
+  <section class="section" id="intents" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge" data-i18n-vi="Khác biệt của Cất Link" data-i18n-en="The Core Differentiation">Khác biệt của Cất Link</div>
+        <h2 data-i18n-vi="6 Ý định • 3 Thời điểm nhắc nhở" data-i18n-en="6 Intent Types • 3 Smart Timing Buckets">6 Ý định • 3 Thời điểm nhắc nhở</h2>
+        <p data-i18n-vi="Không chỉ lưu URL vô hồn. Cất Link gắn liền đường link với mục đích và thời gian bạn có thể thực hiện." data-i18n-en="Beyond raw bookmarks. CatLink connects every saved link with clear purpose and actionable time.">
+          Không chỉ lưu URL vô hồn. Cất Link gắn liền đường link với mục đích và thời gian bạn có thể thực hiện.
+        </p>
+      </div>
+
+      <div class="intent-matrix">
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">🎬</div>
+          <div class="intent-matrix-title" style="color: var(--intent-watch);" data-i18n-vi="Xem (Watch)" data-i18n-en="Watch">Xem</div>
+          <div class="intent-matrix-desc" data-i18n-vi="YouTube, TikTok, phim, reel" data-i18n-en="YouTube, TikTok, movies">YouTube, TikTok, phim</div>
+        </div>
+
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">📖</div>
+          <div class="intent-matrix-title" style="color: var(--intent-read);" data-i18n-vi="Đọc (Read)" data-i18n-en="Read">Đọc</div>
+          <div class="intent-matrix-desc" data-i18n-vi="Bài báo, blog, sách điện tử" data-i18n-en="Articles, blogs, papers">Bài báo, blog, tài liệu</div>
+        </div>
+
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">🛍</div>
+          <div class="intent-matrix-title" style="color: var(--intent-buy);" data-i18n-vi="Mua (Buy)" data-i18n-en="Buy">Mua</div>
+          <div class="intent-matrix-desc" data-i18n-vi="Shopee, Lazada, Tiki, deal" data-i18n-en="Shopping, wishlist, deals">Shopee, Lazada, Tiki</div>
+        </div>
+
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">📍</div>
+          <div class="intent-matrix-title" style="color: var(--intent-go);" data-i18n-vi="Đi (Go)" data-i18n-en="Go">Đi</div>
+          <div class="intent-matrix-desc" data-i18n-vi="Địa điểm quán ăn, du lịch" data-i18n-en="Places, maps, travel">Quán ăn, cafe, bản đồ</div>
+        </div>
+
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">⚡️</div>
+          <div class="intent-matrix-title" style="color: var(--intent-dotask);" data-i18n-vi="Làm (Do Task)" data-i18n-en="Do Task">Làm</div>
+          <div class="intent-matrix-desc" data-i18n-vi="Đăng ký form, việc cần làm" data-i18n-en="Forms, tasks, deadlines">Form đăng ký, thanh toán</div>
+        </div>
+
+        <div class="intent-matrix-item">
+          <div class="intent-matrix-icon">✉️</div>
+          <div class="intent-matrix-title" style="color: var(--intent-send);" data-i18n-vi="Gửi (Send)" data-i18n-en="Send">Gửi</div>
+          <div class="intent-matrix-desc" data-i18n-vi="Gửi cho bạn bè, đồng nghiệp" data-i18n-en="Share with friends, teams">Chia sẻ cho bạn bè</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge" data-i18n-vi="Thiết kế tỉ mỉ cho iOS 17+" data-i18n-en="Crafted for iOS 17+">Thiết kế tỉ mỉ cho iOS 17+</div>
+        <h2 data-i18n-vi="Tính năng mạnh mẽ, giao diện tinh gọn" data-i18n-en="Powerful Features, Clean Interface">Tính năng mạnh mẽ, giao diện tinh gọn</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🚀</div>
+          <h3 data-i18n-vi="Lưu siêu tốc từ Share Sheet" data-i18n-en="Instant Share Sheet Capture">Lưu siêu tốc từ Share Sheet</h3>
+          <p data-i18n-vi="Nhấn nút Chia sẻ trong bất kỳ ứng dụng nào (Safari, TikTok, YouTube, Shopee, Threads...) và chọn Cất Link. Không cần mở app chính." data-i18n-en="Tap Share from any iOS app (Safari, TikTok, YouTube, Shopee, X...). Done in 2 seconds without switching apps.">
+            Nhấn nút Chia sẻ trong bất kỳ ứng dụng nào (Safari, TikTok, YouTube, Shopee, Threads...) và chọn Cất Link. Không cần mở app chính.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📥</div>
+          <h3 data-i18n-vi="Hộp thư hành động (Action Inbox)" data-i18n-en="Action Inbox & Triage">Hộp thư hành động (Action Inbox)</h3>
+          <p data-i18n-vi="Màn hình Hôm nay chỉ hiển thị những link đến hạn xử lý. Thao tác vuốt mượt mà để Đánh dấu xong, Hoãn lại hoặc Xóa nhanh." data-i18n-en="Today view focuses strictly on links due for action. Fluid swipe gestures to complete, snooze, or discard.">
+            Màn hình Hôm nay chỉ hiển thị những link đến hạn xử lý. Thao tác vuốt mượt mà để Đánh dấu xong, Hoãn lại hoặc Xóa nhanh.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🔍</div>
+          <h3 data-i18n-vi="Tủ Link & Tìm kiếm tức thì" data-i18n-en="Library & Instant Search">Tủ Link & Tìm kiếm tức thì</h3>
+          <p data-i18n-vi="Lưu trữ toàn bộ kho link gọn gàng với 4 tab (Chưa xem, Đã xem, Đã bỏ, Tất cả). Tìm kiếm tức thì với highlight từ khóa." data-i18n-en="Organized archive with 4 status views (Active, Done, Discarded, All). Instant search with keyword highlighting.">
+            Lưu trữ toàn bộ kho link gọn gàng với 4 tab (Chưa xem, Đã xem, Đã bỏ, Tất cả). Tìm kiếm tức thì với highlight từ khóa.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🧹</div>
+          <h3 data-i18n-vi="Tự động dọn dẹp link cũ" data-i18n-en="Auto Retention Cleanup">Tự động dọn dẹp link cũ</h3>
+          <p data-i18n-vi="Tùy chọn tự động dọn dẹp link đã xử lý sau 7, 14, 30 hoặc 90 ngày thông qua Background Task Scheduler của iOS." data-i18n-en="Configurable retention policy to automatically clear completed links after 7, 14, 30 or 90 days in background.">
+            Tùy chọn tự động dọn dẹp link đã xử lý sau 7, 14, 30 hoặc 90 ngày thông qua Background Task Scheduler của iOS.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🎨</div>
+          <h3 data-i18n-vi="Tùy biến Giao diện & Màu sắc" data-i18n-en="Theme & Accent Tint Customization">Tùy biến Giao diện & Màu sắc</h3>
+          <p data-i18n-vi="Lựa chọn giữa phong cách Cổ điển, Tối giản hoặc Đơn sắc cùng 5 màu Accent rực rỡ (Ocean, Violet, Forest, Sunset, Coral)." data-i18n-en="Pick between Classic, Minimal, or Monochrome styles with 5 vibrant accent color choices.">
+            Lựa chọn giữa phong cách Cổ điển, Tối giản hoặc Đơn sắc cùng 5 màu Accent rực rỡ (Ocean, Violet, Forest, Sunset, Coral).
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📱</div>
+          <h3 data-i18n-vi="Widget màn hình chính & Khóa" data-i18n-en="Interactive iOS Widgets">Widget màn hình chính & Khóa</h3>
+          <p data-i18n-vi="Theo dõi số link cần xem hôm nay ngay từ màn hình khóa và màn hình chính với WidgetKit." data-i18n-en="Keep track of today's actionable links directly from your Lock Screen and Home Screen with WidgetKit.">
+            Theo dõi số link cần xem hôm nay ngay từ màn hình khóa và màn hình chính với WidgetKit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" id="how-it-works" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n-vi="Cách sử dụng đơn giản" data-i18n-en="How It Works">Cách sử dụng đơn giản</h2>
+        <p data-i18n-vi="3 bước đơn giản giúp bạn không còn áp lực chất đống bookmark" data-i18n-en="3 simple steps to keep your bookmarks under control">
+          3 bước đơn giản giúp bạn không còn áp lực chất đống bookmark
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <span class="step-number" data-i18n-vi="Bước 01" data-i18n-en="Step 01">Bước 01</span>
+          <h3 data-i18n-vi="Bấm Chia sẻ" data-i18n-en="Tap Share">Bấm Chia sẻ</h3>
+          <p data-i18n-vi="Khi thấy bài viết hay video thú vị trên mạng, bấm nút Share của iOS và chọn Cất Link." data-i18n-en="Whenever you find something interesting in any iOS app, tap the native Share button and pick CatLink.">
+            Khi thấy bài viết hay video thú vị trên mạng, bấm nút Share của iOS và chọn Cất Link.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number" data-i18n-vi="Bước 02" data-i18n-en="Step 02">Bước 02</span>
+          <h3 data-i18n-vi="Chọn Ý định & Hẹn giờ" data-i18n-en="Choose Intent & Time">Chọn Ý định & Hẹn giờ</h3>
+          <p data-i18n-vi="Chọn mục đích (Xem, Đọc, Mua...) và thời điểm bạn muốn xử lý (Tối nay, Cuối tuần...)." data-i18n-en="Pick what you want to do (Watch, Read, Buy...) and when to be reminded (Tonight, Weekend...).">
+            Chọn mục đích (Xem, Đọc, Mua...) và thời điểm bạn muốn xử lý (Tối nay, Cuối tuần...).
+          </p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number" data-i18n-vi="Bước 03" data-i18n-en="Step 03">Bước 03</span>
+          <h3 data-i18n-vi="Thảnh thơi xử lý" data-i18n-en="Review Stress-Free">Thảnh thơi xử lý</h3>
+          <p data-i18n-vi="Mở màn hình Hôm nay khi rảnh rỗi hoặc nhận thông báo cục bộ. Xử lý xong, vuốt để hoàn thành." data-i18n-en="Open Today view or receive gentle local notifications. Swipe to complete when done.">
+            Mở màn hình Hôm nay khi rảnh rỗi hoặc nhận thông báo cục bộ. Xử lý xong, vuốt để hoàn thành.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Callout Banner -->
+  <section class="container" id="privacy">
+    <div class="privacy-banner">
+      <div class="privacy-banner-content">
+        <h2 data-i18n-vi="Quyền riêng tư là ưu tiên hàng đầu" data-i18n-en="Privacy First. Always.">Quyền riêng tư là ưu tiên hàng đầu</h2>
+        <p data-i18n-vi="Cất Link được xây dựng theo kiến trúc Local-First. Dữ liệu của bạn được lưu trữ an toàn ngay trên thiết bị của bạn qua SwiftData. Không cần đăng ký tài khoản, không máy chủ lưu link, không theo dõi chéo giữa các ứng dụng." data-i18n-en="CatLink is built local-first. Your data resides securely on your own device with SwiftData. No accounts, no cloud servers storing your links, no cross-app tracking.">
+          Cất Link được xây dựng theo kiến trúc Local-First. Dữ liệu của bạn được lưu trữ an toàn ngay trên thiết bị của bạn qua SwiftData. Không cần đăng ký tài khoản, không máy chủ lưu link, không theo dõi chéo giữa các ứng dụng.
+        </p>
+
+        <div class="privacy-pills">
+          <span class="privacy-pill">🛡️ 100% On-Device</span>
+          <span class="privacy-pill" data-i18n-vi="🚫 Không tài khoản" data-i18n-en="🚫 No Accounts">🚫 Không tài khoản</span>
+          <span class="privacy-pill" data-i18n-vi="🚫 Không bán dữ liệu" data-i18n-en="🚫 Zero Data Selling">🚫 Không bán dữ liệu</span>
+          <span class="privacy-pill" data-i18n-vi="🗑️ Xóa sạch 1 chạm" data-i18n-en="🗑️ 1-Tap Wipe Data">🗑️ Xóa sạch 1 chạm</span>
+        </div>
+      </div>
+
+      <div>
+        <a href="privacy.html" class="btn btn-secondary" style="white-space: nowrap;" data-i18n-vi="Xem chính sách đầy đủ →" data-i18n-en="Read Full Privacy Policy →">
+          Xem chính sách đầy đủ →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n-vi="Câu hỏi thường gặp" data-i18n-en="Frequently Asked Questions">Câu hỏi thường gặp</h2>
+        <p data-i18n-vi="Những thắc mắc phổ biến khi sử dụng Cất Link" data-i18n-en="Common questions about using CatLink">
+          Những thắc mắc phổ biến khi sử dụng Cất Link
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n-vi="Cất Link có lưu dữ liệu link của tôi lên server không?" data-i18n-en="Does CatLink upload my links to a server?">Cất Link có lưu dữ liệu link của tôi lên server không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer" data-i18n-vi="Không. Cất Link hoạt động 100% trên thiết bị của bạn (local-first) sử dụng framework SwiftData của Apple. Chúng tôi không có máy chủ lưu trữ link hay nội dung của bạn." data-i18n-en="No. CatLink runs 100% on-device using Apple SwiftData framework. We do not operate any servers that store your links or personal content.">
+            Không. Cất Link hoạt động 100% trên thiết bị của bạn (local-first) sử dụng framework SwiftData của Apple. Chúng tôi không có máy chủ lưu trữ link hay nội dung của bạn.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n-vi="Làm thế nào để thêm Cất Link vào nút Chia sẻ của iOS?" data-i18n-en="How do I add CatLink to the iOS Share Sheet?">Làm thế nào để thêm Cất Link vào nút Chia sẻ của iOS?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer" data-i18n-vi="Trong bất kỳ ứng dụng nào, bấm nút Chia sẻ, cuộn hàng ứng dụng sang phải cùng, chọn 'Thêm' (More), tìm Cất Link và bật lên. Bạn có thể kéo Cất Link lên đầu danh sách yêu thích." data-i18n-en="In any iOS app, tap the Share icon, scroll the apps row to the far right, tap 'More', find CatLink and enable it. You can also favorite it to pin it to the front.">
+            Trong bất kỳ ứng dụng nào, bấm nút Chia sẻ, cuộn hàng ứng dụng sang phải cùng, chọn 'Thêm' (More), tìm Cất Link và bật lên. Bạn có thể kéo Cất Link lên đầu danh sách yêu thích.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n-vi="Ứng dụng có cần kết nối mạng để hoạt động không?" data-i18n-en="Does the app require an internet connection?">Ứng dụng có cần kết nối mạng để hoạt động không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer" data-i18n-vi="Ứng dụng vẫn lưu link và nhắc nhở hoàn toàn bình thường khi offline. Kết nối mạng chỉ dùng để tự động tải tiêu đề bài viết và ảnh đại diện (metadata preview) khi bạn thêm link." data-i18n-en="The app stores links and triggers reminders completely offline. An internet connection is only used to fetch website title and preview metadata.">
+            Ứng dụng vẫn lưu link và nhắc nhở hoàn toàn bình thường khi offline. Kết nối mạng chỉ dùng để tự động tải tiêu đề bài viết và ảnh đại diện (metadata preview) khi bạn thêm link.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n-vi="Nếu tôi gỡ ứng dụng thì dữ liệu có bị mất không?" data-i18n-en="Will my data be lost if I delete the app?">Nếu tôi gỡ ứng dụng thì dữ liệu có bị mất không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer" data-i18n-vi="Vì dữ liệu nằm hoàn toàn trên thiết bị của bạn để đảm bảo tính riêng tư, khi bạn gỡ bỏ ứng dụng, hệ điều hành iOS sẽ xóa dữ liệu cục bộ của ứng dụng." data-i18n-en="Because all data is stored on-device for maximum privacy, uninstalling the app will remove its local data per iOS standard behavior.">
+            Vì dữ liệu nằm hoàn toàn trên thiết bị của bạn để đảm bảo tính riêng tư, khi bạn gỡ bỏ ứng dụng, hệ điều hành iOS sẽ xóa dữ liệu cục bộ của ứng dụng.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/AppIcon-1024.png" alt="Cất Link Icon" class="brand-icon">
+            <span>Cất Link</span>
+          </a>
+          <p data-i18n-vi="Ứng dụng lưu trữ link thông minh, riêng tư và tập trung vào hành động cho iOS 17+." data-i18n-en="Smart, private and actionable link manager for iOS 17+.">
+            Ứng dụng lưu trữ link thông minh, riêng tư và tập trung vào hành động cho iOS 17+.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n-vi="Sản phẩm" data-i18n-en="Product">Sản phẩm</h4>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link" data-i18n-vi="Tính năng" data-i18n-en="Features">Tính năng</a></li>
+            <li><a href="#intents" class="footer-link" data-i18n-vi="Ý định & Thời điểm" data-i18n-en="Intents & Timing">Ý định & Thời điểm</a></li>
+            <li><a href="#how-it-works" class="footer-link" data-i18n-vi="Cách dùng" data-i18n-en="How it Works">Cách dùng</a></li>
+            <li><a href="#download" class="footer-link" data-i18n-vi="Tải về" data-i18n-en="Download">Tải về</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n-vi="Pháp lý" data-i18n-en="Legal">Pháp lý</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link" data-i18n-vi="Chính sách quyền riêng tư" data-i18n-en="Privacy Policy">Chính sách quyền riêng tư</a></li>
+            <li><a href="terms.html" class="footer-link" data-i18n-vi="Điều khoản sử dụng" data-i18n-en="Terms of Service">Điều khoản sử dụng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n-vi="Hỗ trợ" data-i18n-en="Support">Hỗ trợ</h4>
+          <ul class="footer-links">
+            <li><a href="support.html" class="footer-link" data-i18n-vi="Trung tâm hỗ trợ" data-i18n-en="Help Center">Trung tâm hỗ trợ</a></li>
+            <li><a href="support.html#faq" class="footer-link" data-i18n-vi="Hỏi đáp & Liên hệ" data-i18n-en="FAQ & Contact">Hỏi đáp & Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span class="current-year">2026</span> Cất Link (CastLink). All rights reserved.</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Built with Swift 6 & SwiftUI for iOS 17+</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

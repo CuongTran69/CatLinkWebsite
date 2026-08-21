@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark" data-lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách Quyền riêng tư — Cất Link (CastLink)</title>
+  <meta name="description" content="Chính sách quyền riêng tư của ứng dụng Cất Link (CastLink). Hoạt động local-first, không thu thập thông tin cá nhân, không theo dõi người dùng.">
+  <link rel="icon" type="image/png" href="assets/AppIcon-1024.png">
+  <link rel="apple-touch-icon" href="assets/AppIcon-1024.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/AppIcon-1024.png" alt="Cất Link App Icon" class="brand-icon">
+        <span>Cất Link</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#features" class="nav-link" data-i18n-vi="Tính năng" data-i18n-en="Features">Tính năng</a></li>
+          <li><a href="index.html#how-it-works" class="nav-link" data-i18n-vi="Cách dùng" data-i18n-en="How it Works">Cách dùng</a></li>
+          <li><a href="privacy.html" class="nav-link active" data-i18n-vi="Chính sách" data-i18n-en="Privacy Policy">Chính sách</a></li>
+          <li><a href="support.html" class="nav-link" data-i18n-vi="Hỗ trợ" data-i18n-en="Support">Hỗ trợ</a></li>
+          <li><a href="terms.html" class="nav-link" data-i18n-vi="Điều khoản" data-i18n-en="Terms">Điều khoản</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-btn" aria-label="Toggle language">
+          🌐 <span class="lang-label">EN</span>
+        </button>
+        <button class="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <a href="index.html" class="btn btn-secondary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;" data-i18n-vi="Về trang chủ" data-i18n-en="Home">Về trang chủ</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="doc-page">
+    <div class="container">
+      <div class="doc-header">
+        <div class="badge" data-i18n-vi="Tuân thủ App Store & GDPR" data-i18n-en="App Store & GDPR Compliant">Tuân thủ App Store & GDPR</div>
+        <h1 data-i18n-vi="Chính sách Quyền riêng tư" data-i18n-en="Privacy Policy">Chính sách Quyền riêng tư</h1>
+        <div class="doc-meta">
+          <span><strong>App:</strong> Cất Link (CastLink v1.0.0)</span>
+          <span><strong>Bundle ID:</strong> com.cuongtran.castlink</span>
+          <span><strong>Cập nhật lần cuối:</strong> 21/08/2026</span>
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <div class="doc-highlight-box">
+          <p data-i18n-vi="Tóm tắt quan trọng: Cất Link là ứng dụng Local-First. Toàn bộ link, ghi chú, thẻ và dữ liệu của bạn được lưu trữ 100% trên thiết bị của bạn. Chúng tôi không yêu cầu tài khoản, không có máy chủ thu thập link, không theo dõi bạn và không bán dữ liệu cho bất kỳ bên thứ ba nào." data-i18n-en="Key Summary: CatLink is a Local-First application. All links, notes, tags, and data are stored 100% locally on your device. We do not require accounts, do not run servers storing your links, do not track you across apps, and never sell your data.">
+            Tóm tắt quan trọng: Cất Link là ứng dụng Local-First. Toàn bộ link, ghi chú, thẻ và dữ liệu của bạn được lưu trữ 100% trên thiết bị của bạn. Chúng tôi không yêu cầu tài khoản, không có máy chủ thu thập link, không theo dõi bạn và không bán dữ liệu cho bất kỳ bên thứ ba nào.
+          </p>
+        </div>
+
+        <!-- Section 1: Tiếng Việt -->
+        <section>
+          <h2>1. Dữ liệu được lưu trữ và nơi lưu trữ</h2>
+          <p>Khi bạn sử dụng ứng dụng Cất Link, các dữ liệu sau được xử lý và lưu trữ hoàn toàn trên thiết bị của bạn thông qua framework <strong>SwiftData</strong> và <strong>App Group Container</strong> (group.com.cuongtran.castlink):</p>
+          <ul>
+            <li><strong>Thông tin liên kết:</strong> URL gốc, URL chuẩn hóa (canonical URL), domain, tiêu đề bài viết, đường dẫn ảnh thu nhỏ tạm thời.</li>
+            <li><strong>Phân loại của người dùng:</strong> Ý định (Xem, Đọc, Mua, Đi, Làm, Gửi), Thời điểm nhắc nhở (Tối nay, Cuối tuần, Để sau), trạng thái (Chưa xem, Đã xem, Đã bỏ), ghi chú và thẻ (tags) do bạn nhập.</li>
+            <li><strong>Capture Draft:</strong> Bộ nhớ tạm trong App Group để chuyển link từ Share Extension vào app chính; được dọn dẹp ngay sau khi nạp vào ứng dụng.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>2. Quyền truy cập thiết bị (Permissions)</h2>
+          <ul>
+            <li><strong>Bộ nhớ tạm (Clipboard):</strong> Ứng dụng chỉ đọc clipboard khi bạn chủ động nhấn nút <em>"Dán"</em> hoặc tương tác với banner dán nhanh trên màn hình chính. Ứng dụng không bao giờ tự động đọc clipboard ở chế độ nền.</li>
+            <li><strong>Thông báo cục bộ (UNUserNotificationCenter):</strong> Ứng dụng chỉ gửi thông báo cục bộ từ máy khi bạn hẹn giờ cho một link cụ thể. Không sử dụng thông báo đẩy từ máy chủ quảng cáo.</li>
+            <li><strong>Không truy cập các quyền nhạy cảm:</strong> Ứng dụng <strong>KHÔNG</strong> truy cập Vị trí (Location), Danh bạ (Contacts), Thư viện ảnh (Photos), Camera, Micro hay theo dõi thiết bị (IDFA/App Tracking Transparency).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Phân tích sử dụng ẩn danh (On-Device Analytics)</h2>
+          <p>Nếu bạn bật tùy chọn <em>"Gửi dữ liệu sử dụng ẩn danh"</em> trong phần Cài đặt của ứng dụng:</p>
+          <ul>
+            <li>Ứng dụng chỉ ghi nhận các thống kê cục bộ trong file JSONL trên máy để đếm số lượt lưu link, số link hoàn thành, loại ý định phổ biến nhằm cải thiện trải nghiệm người dùng.</li>
+            <li><strong>Tuyệt đối không lưu URL thô:</strong> Tên miền và ID được băm bằng thuật toán SHA-256 rút gọn.</li>
+            <li>Không tích hợp SDK theo dõi của bên thứ ba (như Google Analytics, Facebook SDK).</li>
+            <li>Bạn có thể <strong>tắt tính năng này bất kỳ lúc nào</strong> và nhấn nút <strong>"Xóa toàn bộ dữ liệu phân tích"</strong> trong Cài đặt để xóa sạch ngay lập tức.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Chia sẻ với bên thứ ba & Bảo mật</h2>
+          <p>Chúng tôi cam kết <strong>không chia sẻ, không trao đổi và không bán</strong> bất kỳ dữ liệu cá nhân nào của bạn cho bất kỳ đối tác hay bên thứ ba nào. Mọi tương tác mạng chỉ diễn ra khi ứng dụng tải tiêu đề và ảnh xem trước công khai của đường link mà bạn chủ động thêm.</p>
+        </section>
+
+        <section>
+          <h2>5. Quyền kiểm soát và Xóa dữ liệu của bạn</h2>
+          <p>Bạn có toàn quyền kiểm soát dữ liệu của mình bất kỳ lúc nào:</p>
+          <ul>
+            <li>Xóa từng link trong màn hình Hôm nay hoặc Tủ link.</li>
+            <li>Bật tính năng <strong>Tự động dọn dẹp (Retention Cleaner)</strong> sau 7, 14, 30 hoặc 90 ngày.</li>
+            <li>Sử dụng chức năng <strong>"Xóa toàn bộ dữ liệu"</strong> trong phần Cài đặt để đưa ứng dụng về trạng thái ban đầu.</li>
+            <li>Gỡ bỏ ứng dụng khỏi thiết bị sẽ xóa toàn bộ cơ sở dữ liệu SwiftData cục bộ khỏi máy của bạn.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. Liên hệ</h2>
+          <p>Nếu bạn có bất kỳ câu hỏi hoặc phản hồi nào về Chính sách Quyền riêng tư này, vui lòng liên hệ:</p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@castlink.app" style="color: var(--primary);">support@castlink.app</a> (hoặc liên hệ nhà phát triển qua <a href="support.html" style="color: var(--primary);">Trang hỗ trợ</a>)</li>
+            <li><strong>Địa chỉ web:</strong> <a href="https://cuongtran.github.io/CatLink/privacy.html" style="color: var(--primary);">https://cuongtran.github.io/CatLink/privacy.html</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© <span class="current-year">2026</span> Cất Link (CastLink). All rights reserved.</div>
+        <div>
+          <a href="index.html" class="footer-link">Trang chủ</a> • 
+          <a href="privacy.html" class="footer-link">Chính sách riêng tư</a> • 
+          <a href="terms.html" class="footer-link">Điều khoản</a> • 
+          <a href="support.html" class="footer-link">Hỗ trợ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
